@@ -13,3 +13,6 @@ src/*.log
 src/**/*.log
 # assets 폴더는 제외
 assets/
+
+layout.html
+layout.css
