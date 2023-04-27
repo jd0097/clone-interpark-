@@ -45,7 +45,7 @@ body {
   .inner {
     padding: 0 20px;
     padding-bottom: 20px;
-    
+
     max-width: 760px;
     border-bottom: 8px solid #f0f4f4;
   }
@@ -104,7 +104,7 @@ body {
 .sw-prev::before {
   transform: scaleX(-100%);
 }
-@media screen and (max-width:1024px){
+@media screen and (max-width: 1024px) {
   .sw-bt {
     display: none;
   }
@@ -184,7 +184,6 @@ body {
 
 @media screen and (max-width: 1280px) {
   .wrap > section {
-
   }
   .section-top {
   }
@@ -195,7 +194,7 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .wrap > section {
-    padding-top: 0;
+    padding-top: 30px;
     padding-bottom: 40px;
   }
   .section-top {
@@ -220,7 +219,6 @@ body {
     white-space: nowrap;
     overflow: hidden;
   }
-  
 
   .section-top .btns a {
     line-height: 34px;
@@ -286,7 +284,6 @@ body {
   .quick-menu {
     display: block;
   }
-  
 }
 /* 플라잉 마이페이지 */
 .fix-mypage {
@@ -316,9 +313,8 @@ body {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
-
 }
-.fix-mypage-list{
+.fix-mypage-list {
   display: inline-block;
 }
 .fix-mypage-list li {
@@ -331,16 +327,14 @@ body {
 .fix-mypage-list li a {
   font-size: 14px;
   color: #666;
-
 }
 .fix-mypage-list li a img {
-width: 48px;
-display: block;
-margin: 0 auto;
-margin-bottom: 8px;
+  width: 48px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 8px;
 }
-@media screen and (max-width:1280px) {
-  
+@media screen and (max-width: 1280px) {
 }
 /* 기본레이아웃 */
 .wrap {
@@ -566,7 +560,6 @@ margin-bottom: 8px;
 
 @media screen and (max-width: 1024px) {
   .header {
-    
   }
   .header .inner {
     padding-top: 15px;
@@ -628,7 +621,6 @@ margin-bottom: 8px;
 
 /* 추천이벤트 */
 .promotion {
-  
 }
 
 .promotion .inner {
@@ -656,6 +648,7 @@ margin-bottom: 8px;
   position: relative;
   display: none;
   text-align: center;
+  z-index: 999;
 }
 .sw-promotion-pg {
   display: inline-block;
@@ -671,7 +664,6 @@ margin-bottom: 8px;
   }
   .promotion .inner {
     height: 300px;
-    
   }
   .promotion .section-top {
     display: block;
@@ -731,7 +723,6 @@ margin-bottom: 8px;
 
 /* 쇼핑추천 */
 .shopping {
-
 }
 .shopping .section-slide {
   /* height: 405px; */
@@ -774,7 +765,7 @@ margin-bottom: 8px;
   line-height: 24px;
   color: #111;
   font-weight: 700;
-  
+
   white-space: nowrap;
 }
 .good-info-list li b span {
@@ -803,47 +794,39 @@ margin-bottom: 8px;
   -webkit-box-orient: vertical;
 }
 
-@media screen and (max-width:1280px) {
-  
+@media screen and (max-width: 1280px) {
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .good-info {
     padding: 10px;
   }
-  
 }
 
-@media screen and (max-width:800px) {
-
+@media screen and (max-width: 800px) {
   .good-info-list li b {
     font-size: 15px;
     line-height: 18px;
     white-space: nowrap;
-}
-.good-info {
-padding: 10px;
-}
+  }
+  .good-info {
+    padding: 10px;
+  }
 }
 
-
-@media screen and (max-width:760px) {
-
+@media screen and (max-width: 760px) {
   .good-info-list li b {
     font-size: 12px;
     line-height: 18px;
+  }
+  .good-info {
+    padding: 5px;
+  }
+  .good-info-list li p {
+    font-size: 13px;
+    line-height: 16px;
+    height: 32px;
+  }
 }
-.good-info {
-padding: 5px;
-}
-.good-info-list li p {
-  font-size: 13px;
-  line-height: 16px;
-  height: 32px;
-
-}
-}
-
-
 
 /* 투어특가 */
 .tour {
@@ -852,7 +835,7 @@ padding: 5px;
 }
 
 .tour .section-slide {
-  height: 355px;
+  /* height: 355px; */
 }
 .sw-tour {
   height: 100%;
@@ -868,7 +851,15 @@ padding: 5px;
 .tour-img {
   position: relative;
   width: 100%;
-  height: 245px;
+  max-height: 245px;
+  /* 1280px 일때 높이가 245px 이다.*/
+  /* 1280px 이 100vw*/
+  /* 245px 은 몇 vw 일까?*/
+  /* 245 / 1280 * 100 */
+
+  max-height: 245px;
+  height: 19.14vw;
+
   overflow: hidden;
 }
 .tour-img img {
@@ -877,7 +868,7 @@ padding: 5px;
   top: 50%;
   left: 50%;
   /* 좌표, 영역말고 내용 즉, 보이는 부분만 이동 */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.3);
 
   width: 100%;
 }
@@ -927,7 +918,33 @@ padding: 5px;
   font-weight: 700;
   font-size: 20px;
 }
-
+@media screen and (max-width: 1024px) {
+  .tour-img {
+    /* height: 138px; */
+  }
+  .tour-info {
+    padding: 10px;
+  }
+  .tour-cate {
+    top: -22px;
+    line-height: 22px;
+    padding: 0 7px;
+    border-radius: 4px;
+  }
+  .tour-title {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .tour-place {
+    font-size: 15px;
+  }
+  .tour-place b {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 760px) {
+}
 /* 티켓랭킹 */
 .ticket {
   padding-top: 30px;
