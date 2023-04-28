@@ -1416,7 +1416,6 @@ body {
   }
 }
 @media screen and (max-width: 1024px) {
- 
   .books-img {
     height: 322px;
   }
@@ -1436,7 +1435,6 @@ body {
   .books-img {
     height: 41.66vw;
   }
- 
 }
 /* 이벤트 */
 .event {
@@ -1455,6 +1453,7 @@ body {
   height: 100%;
 }
 .events-link {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -1470,6 +1469,11 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   mix-blend-mode: multiply;
+}
+@media screen and (max-width: 1024px) {
+  .event {
+    display: none;
+  }
 }
 
 /* 하단 */
