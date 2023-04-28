@@ -37,7 +37,6 @@ body {
 }
 @media screen and (max-width: 1280px) {
   .inner {
-    padding: 0 20px;
     max-width: 1024px;
   }
 }
@@ -109,7 +108,6 @@ body {
     display: none;
   }
 }
-
 /* section 내용 구조 */
 
 .wrap > section {
@@ -185,6 +183,7 @@ body {
 @media screen and (max-width: 1280px) {
   .wrap > section {
   }
+
   .section-top {
   }
   .section-top > h2 {
@@ -208,6 +207,7 @@ body {
     font-size: 15px;
     line-height: 18px;
   }
+
   .bt-link-shop {
     display: block;
     font-size: 15px;
@@ -219,11 +219,10 @@ body {
     white-space: nowrap;
     overflow: hidden;
   }
-
   .section-top .btns a {
     line-height: 34px;
     padding: 0 14px;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 }
 @media screen and (max-width: 760px) {
@@ -260,7 +259,8 @@ body {
   font-size: 0;
   margin-top: 10px;
 }
-/* 퀵 메뉴 */
+
+/* 퀵메뉴 */
 .quick-menu {
   display: none;
   position: fixed;
@@ -268,16 +268,14 @@ body {
   left: 0;
   width: 100%;
   background: #fff;
-  z-index: 999;
+  z-index: 99;
 }
-
 .quick-menu .inner {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
-
 .quick-menu a {
 }
 @media screen and (max-width: 1024px) {
@@ -293,9 +291,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 99999999;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999999;
 }
+
 .fix-mypage-main {
   position: absolute;
   bottom: 0;
@@ -324,6 +323,7 @@ body {
 .fix-mypage-list li:last-child {
   margin-right: 0;
 }
+
 .fix-mypage-list li a {
   font-size: 14px;
   color: #666;
@@ -336,6 +336,7 @@ body {
 }
 @media screen and (max-width: 1280px) {
 }
+
 /* 기본레이아웃 */
 .wrap {
 }
@@ -649,9 +650,11 @@ body {
   position: relative;
   text-align: center;
   z-index: 999;
+  margin-top: 17px;
 }
 .sw-promotion-pg {
   display: inline-block;
+  /* bottom: 0; */
 }
 
 @media screen and (max-width: 1280px) {
@@ -686,7 +689,7 @@ body {
   }
   .sw-promotion-pg .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #000;
+    background-color: #000;
   }
 }
 
@@ -705,7 +708,6 @@ body {
     margin-top: -20px;
     z-index: 999;
   }
-  /* swiper.js 에서 자동으로 css 생성 */
   .sw-promotion-pg .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
@@ -717,7 +719,7 @@ body {
     opacity: 1;
     width: 8px;
     height: 8px;
-    background: #fff;
+    background-color: #fff;
   }
 }
 
@@ -765,7 +767,6 @@ body {
   line-height: 24px;
   color: #111;
   font-weight: 700;
-
   white-space: nowrap;
 }
 .good-info-list li b span {
@@ -801,7 +802,6 @@ body {
     padding: 10px;
   }
 }
-
 @media screen and (max-width: 800px) {
   .good-info-list li b {
     font-size: 15px;
@@ -812,7 +812,6 @@ body {
     padding: 10px;
   }
 }
-
 @media screen and (max-width: 760px) {
   .good-info-list li b {
     font-size: 12px;
@@ -851,12 +850,11 @@ body {
 .tour-img {
   position: relative;
   width: 100%;
-  max-height: 245px;
-  /* 1280px 일때 높이가 245px 이다.*/
-  /* 1280px 이 100vw*/
-  /* 245px 은 몇 vw 일까?*/
-  /* 245 / 1280 * 100 */
 
+  /* 1280px 일때 높이가 245 px 이다. */
+  /* 1280px 이 100vw 라면  */
+  /* 245px 은 몇 vw 일까? */
+  /*  245 / 1280 * 100  */
   max-height: 245px;
   height: 19.14vw;
 
@@ -918,6 +916,7 @@ body {
   font-weight: 700;
   font-size: 20px;
 }
+
 @media screen and (max-width: 1024px) {
   .tour-img {
     /* height: 138px; */
@@ -935,23 +934,24 @@ body {
     font-size: 13px;
     line-height: 15px;
   }
-  .tour-place {
+  .tour-price {
     font-size: 15px;
   }
-  .tour-place b {
+  .tour-price b {
     font-size: 15px;
     line-height: 18px;
   }
 }
 @media screen and (max-width: 760px) {
 }
+
 /* 티켓랭킹 */
 .ticket {
   padding-top: 30px;
   padding-bottom: 90px;
 }
 .ticket .section-slide {
-  height: 540px;
+  /* height: 540px; */
 }
 .ticket .section-slide .sw-bt {
   top: 35%;
@@ -1056,7 +1056,6 @@ body {
   border: 1px solid rgba(239, 62, 67, 0.3);
   border-radius: 3px;
 }
-
 @media screen and (max-width: 1280px) {
   .ticket-img img {
     transform: translate(-50%, -50%) scale(1);
@@ -1074,6 +1073,9 @@ body {
   }
   .ticket-img img {
     transform: translate(-50%, -50%) scale(1.4);
+  }
+  .sw-ticket .swiper-slide {
+    width: 150px;
   }
 }
 @media screen and (max-width: 760px) {
@@ -1263,10 +1265,14 @@ body {
   line-height: 24px;
   font-weight: 700;
 }
+
 @media screen and (max-width: 1024px) {
   .live .section-slide {
-   height: 285px;
+    height: 285px;
   }
+  /* .live .section-slide .sw-bt{
+    top: 50%;
+  } */
   .live-info {
     padding: 12px;
   }
@@ -1307,6 +1313,7 @@ body {
     white-space: nowrap;
     margin-top: -5px;
   }
+
   .live-info-desc-price em {
     font-size: 13px;
   }
@@ -1317,50 +1324,32 @@ body {
 @media screen and (max-width: 760px) {
   .live .section-slide {
     height: 230px;
-   }
- 
- 
-   .live-info-title {
-     font-size: 14px;
-     line-height: 17px;
-     height: 34px;
-   }
-   .live-info-date {
-     font-size: 13px;
-     line-height: 16px;
-     white-space: nowrap;
-   }
-   .live-info-time {
-     font-size: 24px;
-     line-height: 28px;
-   }
-   .live-info-bottom{
+  }
+
+  .live-info-title {
+    font-size: 14px;
+    line-height: 17px;
+    height: 34px;
+  }
+  .live-info-date {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .live-info-time {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .live-info-bottom {
     padding: 0 10px;
-   }
-   .live-info-desc {
-     float: right;
-     width: 100%;
-   }
-   /* 화면이 좁을 때 이미지 숨김 */
-   .live-info-thumb {
+  }
+  .live-info-desc {
+    float: right;
+    width: 100%;
+  }
+  /* 화면이 좁을 때 이미지 숨김 */
+  .live-info-thumb {
     display: none;
-     
-   }
-   .live-info-desc-title {
-     font-size: 13px;
-     margin-top: 5px;
-   }
-   .live-info-desc-price {
-     font-size: 13px;
-     white-space: nowrap;
-     margin-top: -5px;
-   }
-   .live-info-desc-price em {
-     font-size: 13px;
-   }
-   .live-info-desc-price b {
-     font-size: 13px;
-   }
+  }
 }
 
 /* 오늘의 도서 */
@@ -1369,7 +1358,9 @@ body {
   padding-bottom: 90px;
 }
 .books .section-slide {
-  height: 400px;
+}
+.books .section-slide .sw-bt {
+  top: 41%;
 }
 .sw-books {
   height: 100%;
@@ -1416,7 +1407,37 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-
+@media screen and (max-width: 1280px) {
+  .books-img {
+    height: 457px;
+  }
+  .books .section-slide .sw-bt {
+    top: 44%;
+  }
+}
+@media screen and (max-width: 1024px) {
+ 
+  .books-img {
+    height: 322px;
+  }
+  .books-info-title {
+    font-size: 13px;
+    line-height: 15px;
+    margin: 4px 0;
+  }
+  .books-info-price {
+    font-size: 14px;
+  }
+  .books-info-price em {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .books-img {
+    height: 41.66vw;
+  }
+ 
+}
 /* 이벤트 */
 .event {
   padding-top: 30px;
