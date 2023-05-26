@@ -1,5 +1,5 @@
 {
-  "good_count": 5,
+  "good_count": 4,
   "good_1": {
     "link": "#",
     "pic": "good1.png",
@@ -22,13 +22,6 @@
     "price": "11,950"
   },
   "good_4": {
-    "link": "#",
-    "pic": "good4.jpg",
-    "product": "[베베당] 유기농 롱스틱 골고루 10봉 세트",
-    "ratio": 5,
-    "price": "11,950"
-  },
-  "good_5": {
     "link": "#",
     "pic": "good4.jpg",
     "product": "[베베당] 유기농 롱스틱 골고루 10봉 세트",
