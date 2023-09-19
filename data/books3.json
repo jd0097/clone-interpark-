@@ -1,0 +1,46 @@
+{
+  "books_count": 6,
+
+  "books_1": {
+    "link": "#",
+    "img": "bookspe1.jpg",
+    "alt": "bookspe",
+    "title": "뽀로로 응가 사운드북: 나타났다 뿌직 똥",
+    "price": "11,200"
+  },
+  "books_2": {
+    "link": "#",
+    "img": "bookspe2.jpg",
+    "alt": "bookspe",
+    "title": "흔한남매 유튜브 연습장",
+    "price": "4,000"
+  },
+  "books_3": {
+    "link": "#",
+    "img": "bookspe3.jpg",
+    "alt": "bookspe",
+    "title": "덧셈부터 나눗셈까지 쉽게 배울 수 있는 셈이 술술 주산셈 실전설",
+    "price": "6,500"
+  },
+  "books_4": {
+    "link": "#",
+    "img": "bookspe4.jpg",
+    "alt": "bookspe",
+    "title": "뽀로로 바나나차차 율동 사운드북",
+    "price": "11,200"
+  },
+  "books_5": {
+    "link": "#",
+    "img": "bookspe5.jpg",
+    "alt": "bookspe",
+    "title": "콩순이 첫 낱말 카드 120",
+    "price": "9,000"
+  },
+  "books_6": {
+    "link": "#",
+    "img": "bookspe6.jpg",
+    "alt": "bookspe",
+    "title": "오려도 오려도 끝판왕 진짜! 마트 오리기",
+    "price": "12,400"
+  }
+}

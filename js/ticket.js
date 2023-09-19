@@ -1,82 +1,64 @@
 /**
- * 작성자 : 홍길동
- * 연락처 : aaa@aaa.net;
+ * 작성자 : 정다혜
+ * 연락처 : jd0097@naver.com;
  * 작성일 : 23-05-22
  * 기능 : 투어 리스트 슬라이드 코드
  * 업데이트 : 각 투어 목록 출력 함수화 작업
  */
 window.addEventListener("load", function () {
-    // Ticket Swiper
-    function parseTicket(_menu) {
-        // let xhr = new XMLHttpRequest();
-        // xhr.onreadystatechange = function (event) {
-        //   let req = event.target;
-        //   if (req.readyState === XMLHttpRequest.DONE) {
-        //     let data = JSON.parse(req.response);
-        //     makeTicketSlide(data);
-        //   }
-        // };
-
-        if (_menu === "뮤지컬") {
-            // xhr.open("GET", "data/ticketdata.json");
-            fetch("data/ticketdata.json")
-                .then((res) => res.json())
-                .then((result) => makeTicketSlide(result))
-                .catch((err) => console.log(err));
-        } else if (_menu === "콘서트") {
-            // xhr.open("GET", "data/ticketdata1.json");
-            fetch("data/ticketdata1.json")
-                .then((res) => res.json())
-                .then((result) => makeTicketSlide(result))
-                .catch((err) => console.log(err));
-        } else if (_menu === "연극") {
-            // xhr.open("GET", "data/ticketdata2.json");
-            fetch("data/ticketdata2.json")
-                .then((res) => res.json())
-                .then((result) => makeTicketSlide(result))
-                .catch((err) => console.log(err));
-        } else if (_menu === "클래식/무용") {
-            // xhr.open("GET", "data/ticketdata3.json");
-            fetch("data/ticketdata3.json")
-                .then((res) => res.json())
-                .then((result) => makeTicketSlide(result))
-                .catch((err) => console.log(err));
-        } else if (_menu === "스포츠") {
-            // xhr.open("GET", "data/ticketdata4.json");
-            fetch("data/ticketdata4.json")
-                .then((res) => res.json())
-                .then((result) => makeTicketSlide(result))
-                .catch((err) => console.log(err));
-        } else if (_menu === "레저/캠핑") {
-            // xhr.open("GET", "data/ticketdata5.json");
-            fetch("data/ticketdata5.json")
-                .then((res) => res.json())
-                .then((result) => makeTicketSlide(result))
-                .catch((err) => console.log(err));
-        } else if (_menu === "전시/행사") {
-            // xhr.open("GET", "data/ticketdata6.json");
-            fetch("data/ticketdata6.json")
-                .then((res) => res.json())
-                .then((result) => makeTicketSlide(result))
-                .catch((err) => console.log(err));
-        } else if (_menu === "아동/가족") {
-            // xhr.open("GET", "data/ticketdata7.json");
-            fetch("data/ticketdata7.json")
-                .then((res) => res.json())
-                .then((result) => makeTicketSlide(result))
-                .catch((err) => console.log(err));
-        }
-        // xhr.send();
+  // Ticket Swiper
+  function parseTicket(_menu) {
+    if (_menu === "뮤지컬") {
+      fetch("data/ticketdata.json")
+        .then((res) => res.json())
+        .then((result) => makeTicketSlide(result))
+        .catch((err) => console.log(err));
+    } else if (_menu === "콘서트") {
+      fetch("data/ticketdata1.json")
+        .then((res) => res.json())
+        .then((result) => makeTicketSlide(result))
+        .catch((err) => console.log(err));
+    } else if (_menu === "연극") {
+      fetch("data/ticketdata2.json")
+        .then((res) => res.json())
+        .then((result) => makeTicketSlide(result))
+        .catch((err) => console.log(err));
+    } else if (_menu === "클래식/무용") {
+      fetch("data/ticketdata3.json")
+        .then((res) => res.json())
+        .then((result) => makeTicketSlide(result))
+        .catch((err) => console.log(err));
+    } else if (_menu === "스포츠") {
+      fetch("data/ticketdata4.json")
+        .then((res) => res.json())
+        .then((result) => makeTicketSlide(result))
+        .catch((err) => console.log(err));
+    } else if (_menu === "레저/캠핑") {
+      fetch("data/ticketdata5.json")
+        .then((res) => res.json())
+        .then((result) => makeTicketSlide(result))
+        .catch((err) => console.log(err));
+    } else if (_menu === "전시/행사") {
+      fetch("data/ticketdata6.json")
+        .then((res) => res.json())
+        .then((result) => makeTicketSlide(result))
+        .catch((err) => console.log(err));
+    } else if (_menu === "아동/가족") {
+      fetch("data/ticketdata7.json")
+        .then((res) => res.json())
+        .then((result) => makeTicketSlide(result))
+        .catch((err) => console.log(err));
     }
-    parseTicket("뮤지컬");
+  }
+  parseTicket("뮤지컬");
 
-    let ticketSwiper;
+  let ticketSwiper;
+  function makeTicketSlide(_data) {
+    let swTicketHtml = ``;
+    for (let i = 0; i < _data.ticket_total; i++) {
+      let obj = _data[`ticket_${i + 1}`];
 
-    function makeTicketSlide(_data) {
-        let swTicketHtml = ``;
-        for (let i = 0; i < _data.ticket_total; i++) {
-            let obj = _data[`ticket_${i + 1}`];
-            let temp = `
+      let temp = `
       <div class="swiper-slide">
       <a href="${obj.link}" class="ticket-link">
         <div class="ticket-img">
@@ -100,66 +82,61 @@ window.addEventListener("load", function () {
       </a>
     </div>
     `;
-            swTicketHtml += temp;
-        }
-
-        let swTicketWrapper = document.querySelector(".sw-ticket .swiper-wrapper");
-        swTicketWrapper.innerHTML = swTicketHtml;
-
-        if (ticketSwiper) {
-            ticketSwiper.destroy();
-        }
-        ticketSwiper = new Swiper(".sw-ticket", {
-            slidesPerView: "auto",
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".ticket .sw-next",
-                prevEl: ".ticket .sw-prev",
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 32,
-                },
-                1280: {
-                    slidesPerView: 4,
-                    spaceBetween: 27,
-                },
-            },
-        });
+      swTicketHtml += temp;
     }
-    const btns = this.document.querySelectorAll(".ticket .btns a");
-    btns[0].onclick = function (event) {
-        event.preventDefault();
-        parseTicket("뮤지컬");
+
+    let swTicketWrapper = document.querySelector(".sw-ticket .swiper-wrapper");
+    swTicketWrapper.innerHTML = swTicketHtml;
+
+    let ticketSaleElements = document.querySelectorAll(".ticket-sale");
+    ticketSaleElements.forEach((element) => {
+      if (element.textContent === "") {
+        element.style.display = "none";
+      }
+    });
+
+    if (ticketSwiper) {
+      ticketSwiper.destroy();
+    }
+    ticketSwiper = new Swiper(".sw-ticket", {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".ticket .sw-next",
+        prevEl: ".ticket .sw-prev",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 27,
+        },
+      },
+    });
+  }
+  const btns = this.document.querySelectorAll(".ticket .btns a");
+  let cateName = [
+    "뮤지컬",
+    "콘서트",
+    "연극",
+    "클래식/무용",
+    "스포츠",
+    "레저/캠핑",
+    "전시/행사",
+    "아동/가족",
+  ];
+  for (let i = 0; i < cateName.length; i++) {
+    btns[i].onclick = function (event) {
+      event.preventDefault();
+      parseTicket(cateName[i]);
+      for (let j = 0; j < btns.length; j++) {
+        btns[j].classList.remove("btns-active");
+      }
+      // 포커스 적용
+      this.classList.add("btns-active");
     };
-    btns[1].onclick = function (event) {
-        // a태그의 기본 동작인 href를 막는다.
-        event.preventDefault();
-        parseTicket("콘서트");
-    };
-    btns[2].onclick = function (event) {
-        event.preventDefault();
-        parseTicket("연극");
-    };
-    btns[3].onclick = function (event) {
-        event.preventDefault();
-        parseTicket("클래식/무용");
-    };
-    btns[4].onclick = function (event) {
-        event.preventDefault();
-        parseTicket("스포츠");
-    };
-    btns[5].onclick = function (event) {
-        event.preventDefault();
-        parseTicket("레저/캠핑");
-    };
-    btns[6].onclick = function (event) {
-        event.preventDefault();
-        parseTicket("전시/행사");
-    };
-    btns[7].onclick = function (event) {
-        event.preventDefault();
-        parseTicket("아동/가족");
-    };
+  }
 });

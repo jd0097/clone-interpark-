@@ -12,6 +12,7 @@ window.addEventListener("load", function () {
   };
   liveXhttp.open("GET", "data/livedata.json");
   liveXhttp.send();
+  
   function makeLiveSlide() {
     let swLiveHtml = ``;
     for (let i = 0; i < liveData.live_total; i++) {

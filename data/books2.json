@@ -1,0 +1,46 @@
+{
+  "books_count": 6,
+
+  "books_1": {
+    "link": "#",
+    "img": "booknew1.jpg",
+    "alt": "booknew",
+    "title": "하하 자매 떡집",
+    "price": "6,480"
+  },
+  "books_2": {
+    "link": "#",
+    "img": "booknew2.jpg",
+    "alt": "booknew",
+    "title": "딸아, 돈 공부 절대 미루지 마라",
+    "price": "15,120"
+  },
+  "books_3": {
+    "link": "#",
+    "img": "booknew3.jpg",
+    "alt": "booknew",
+    "title": "태양 왕 수바: 수박의 전설",
+    "price": "16,020"
+  },
+  "books_4": {
+    "link": "#",
+    "img": "booknew4.jpg",
+    "alt": "booknew",
+    "title": "별일은 없고요?",
+    "price": "22,500"
+  },
+  "books_5": {
+    "link": "#",
+    "img": "booknew5.jpg",
+    "alt": "booknew",
+    "title": "유연함의 힘",
+    "price": "13,320"
+  },
+  "books_6": {
+    "link": "#",
+    "img": "booknew6.jpg",
+    "alt": "booknew",
+    "title": "형사 박미옥",
+    "price": "19,800"
+  }
+}

@@ -41,7 +41,7 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 9999999999;
- display: none;
+  display: none;
 }
 .modal-cont {
   width: 600px;
@@ -408,7 +408,6 @@ body {
   background-size: contain;
 }
 
-
 .search {
   position: absolute;
   top: 0;
@@ -703,8 +702,9 @@ body {
 @media screen and (max-width: 1024px) {
   .promotion {
   }
+
   .promotion .inner {
-    height: 300px;
+    height: 310px;
   }
   .promotion .section-top {
     display: block;
@@ -716,6 +716,7 @@ body {
 
   .sw-promotion-control {
     display: block;
+    margin-top: 5px;
   }
   /* swiper.js 에서 자동으로 css 생성 */
   .sw-promotion-pg .swiper-pagination-bullet {
@@ -747,6 +748,7 @@ body {
     z-index: 999;
   }
   .sw-promotion-pg .swiper-pagination-bullet {
+  
     width: 6px;
     height: 6px;
     border-radius: 50%;
