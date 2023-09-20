@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
   };
   liveXhttp.open("GET", "data/livedata.json");
   liveXhttp.send();
-  
+
   function makeLiveSlide() {
     let swLiveHtml = ``;
     for (let i = 0; i < liveData.live_total; i++) {
@@ -33,12 +33,12 @@ window.addEventListener("load", function () {
                           <p class="live-info-time">${obj.time}</p>
                         </div>
                         <div class="live-info-bottom clearfix">
-                          <div class="live-info-thumb">
+                          <div class="live-info-thumb" ${obj.thumbAlt? "style='display:block'" : "style='display:none'"}>
                             <img src="images/${obj.thumbImg}" alt="${obj.thumbAlt}" />
                           </div>
-                          <div class="live-info-desc">
+                          <div class="live-info-desc" ${obj.descTitle? "style='display:block'" : "style='display:none'"}>
                             <p class="live-info-desc-title">${obj.descTitle}</p>
-                            <p class="live-info-desc-price"><em>${obj.ratio}%</em> <b>${obj.price}</b>원</p>
+                            <p class="live-info-desc-price" ${obj.ratio? "style='display:block'" : "style='display:none'"}><em>${obj.ratio}%</em> <b>${obj.price}</b>원</p>
                           </div>
                         </div>
                       </div>
